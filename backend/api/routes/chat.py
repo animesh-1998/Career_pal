@@ -24,8 +24,9 @@ async def stream_response(message: str, config: dict):
         config=config,
         version="v2"
     ):
-        print("Event:", event)  # Debug: print the entire event
-        if event["event"] == "on_chain_stream" and event["name"] in ("job_hunt_node", "chat_node"):
+          # Debug: print the entire event
+        if event["event"] == "on_chain_stream":
+            print("Event:", event)
             chunk = event["data"].get("chunk", {})
             messages = chunk.get("messages", [])
             if messages:
