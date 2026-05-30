@@ -1,2 +1,6 @@
 __pycache__/
 backend/gcp-oauth.keys.json
+backend/.env
+backend/events_log.jsonl
+backend/events_log.txt
+backend/llm/prompts/descriptions.txt

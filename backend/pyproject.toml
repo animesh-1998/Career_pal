@@ -5,9 +5,19 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "asyncpg>=0.31.0",
     "fastapi>=0.134.0",
+    "fastmcp>=3.2.3",
+    "langchain-google-genai>=4.2.1",
     "langchain-mcp-adapters>=0.2.1",
     "langchain-ollama>=1.0.1",
+    "langchain-openai>=1.1.12",
     "langgraph>=1.0.10",
+    "langgraph-checkpoint-postgres>=3.0.5",
+    "pdfplumber>=0.11.9",
+    "psycopg2-binary>=2.9.11",
+    "psycopg[binary]>=3.3.3",
+    "pyjwt>=2.11.0",
+    "reportlab>=4.4.10",
     "uvicorn>=0.41.0",
 ]

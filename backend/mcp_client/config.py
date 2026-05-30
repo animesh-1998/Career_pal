@@ -16,7 +16,11 @@ MCP_SERVERS = {
             "-m", "linkedin_mcp_server",
             "--transport", "stdio"      # ← skip the interactive prompt
         ],
-        "transport": "stdio"
+        "transport": "stdio",
+        "env": {
+            "PYTHONIOENCODING": "utf-8",   # ← add this
+            "PYTHONUTF8": "1"              # ← and this
+        }
     },
     "email": {
         "command": "node",
@@ -28,5 +32,12 @@ MCP_SERVERS = {
             "GMAIL_OAUTH_PATH": str(HOME_DIR / ".gmail-mcp" / "gcp-oauth.keys.json"),
             "GMAIL_CREDENTIALS_PATH": str(HOME_DIR / ".gmail-mcp" / "credentials.json")
         }
+    },
+    "resume": {
+        "command": "python",
+        "args": [
+            str(BASE_DIR / "backend" / "mcp-server" / "resume-mcp-server" / "resume_server.py")
+        ],
+        "transport": "stdio",
     }
 }

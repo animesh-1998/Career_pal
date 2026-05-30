@@ -108,7 +108,7 @@ def register_job_tools(mcp: FastMCP) -> None:
             result = await extractor.search_jobs(keywords, location)
 
             await ctx.report_progress(progress=100, total=100, message="Complete")
-
+            # print("Search result:", result)
             return result
 
         except Exception as e:
